@@ -1,14 +1,25 @@
 'use strict'
-var gBallSize = 100
+var gBallsSize = 100
 
-function onBallClick(elBall,maxDiameter) {
-  gBallSize  += getRandomInt(20, 60)
+
+const gBalls = document.querySelectorAll('.balls')
+
+function onBallClick(elBall, maxDiameter, ) {
+  gBallsSize += getRandomInt(20, 60)
   const color = getRandomColor()
-  if (gBallSize  > maxDiameter) {
-    gBallSize  = 100
+
+  if (gBallsSize > maxDiameter) {
+    gBallsSize = 100
   }
-  elBall.style.height = gBallSize  + 'px'
-  elBall.style.width = gBallSize  + 'px'
-  elBall.innerText = gBallSize 
+  elBall.style.height = gBallsSize + 'px'
+  elBall.style.width = gBallsSize + 'px'
+  elBall.innerText = gBallsSize
   elBall.style.backgroundColor = color
 }
+
+function onChangeBallsColor() {
+  for (var i = 0; i < 2; i++) {
+    gBalls[i].style.backgroundColor = getRandomColor()
+  }
+}
+
