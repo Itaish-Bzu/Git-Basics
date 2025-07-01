@@ -1,15 +1,14 @@
 'use strict'
-var size = 100
+var gBallSize = 100
 
-function onBallClick() {
-  size += getRandomInt(20, 60)
+function onBallClick(elBall,maxDiameter) {
+  gBallSize  += getRandomInt(20, 60)
   const color = getRandomColor()
-  if (size > 400) {
-    size = 100
+  if (gBallSize  > maxDiameter) {
+    gBallSize  = 100
   }
-  const elBall = document.querySelector('.ball')
-  elBall.style.height = size + 'px'
-  elBall.style.width = size + 'px'
-  elBall.innerText = size
+  elBall.style.height = gBallSize  + 'px'
+  elBall.style.width = gBallSize  + 'px'
+  elBall.innerText = gBallSize 
   elBall.style.backgroundColor = color
 }
