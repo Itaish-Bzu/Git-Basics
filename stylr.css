@@ -1,5 +1,6 @@
 body{
     background-color: #000000;
+    text-align: center;
 }
 
 h1{
@@ -7,9 +8,15 @@ h1{
 }
 
 .ball{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height:100px ;
     width:100px;
     border-radius: 50%;
     background-color: palevioletred;
     margin: 10px auto;
+    font-size: 22px;
+    font-weight: bold;
+
 }
