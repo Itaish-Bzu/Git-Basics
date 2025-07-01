@@ -23,3 +23,8 @@ function onChangeBallsColor() {
   }
 }
 
+function onChangeBcgColor(){
+  const color = getRandomColor()
+
+  document.querySelector('body').style.backgroundColor = color
+}
