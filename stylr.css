@@ -23,6 +23,8 @@ h1{
 
 .ball{ 
     background-color: palevioletred;
+     height:100px ;
+    width:100px;
 }
 
 .ball2{
@@ -34,4 +36,7 @@ h1{
 
 .ball4{
     background-color: bisque;
+}
+.ball5{
+    background-color: rgb(208, 133, 42);
 }
